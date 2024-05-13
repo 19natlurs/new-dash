@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import Layout from "./shared/Layout";
 import Product from "./components/Product";
-import Dashboard from "./components/dashboard";
+import Dashboard from "./components/Dashboard";
 import LoginPage from "./pages/LoginPage";
 import { useSelector } from "react-redux";
 import { redirect } from "react-router-dom";
