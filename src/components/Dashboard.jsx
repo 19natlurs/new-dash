@@ -15,7 +15,7 @@ function Dashboard() {
         <BuyersProfileChart />
       </div>
 
-      <div className="flex flex-row border border-t-black gap-4 justify-center w-full lg:flex-col ">
+      <div className="flex flex-col border border-t-black gap-4 justify-center w-full lg:flex-row ">
         <RecentProduct />
         <PopularProduct />
       </div>

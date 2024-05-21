@@ -22,7 +22,7 @@ function Header({ setSideMenu }) {
       className={
         menuState
           ? "hidden"
-          : "flex flex-1 bg-white h-14 border  justify-between m-2 gap-4 w-[26rem] sm:w-full "
+          : "flex flex-1 bg-white h-14 border  justify-between m-2 gap-4 w-screen sm:w-full "
       }
     >
       <div

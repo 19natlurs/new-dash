@@ -8,7 +8,7 @@ function Layout() {
   const [isMenuOpen, setSideMenu] = useState();
 
   return (
-    <div className="h-screen w-screen bg-neutral-100 flex flex-row  overflow-x-hidden  ">
+    <div className="h-screen w-full bg-neutral-100 flex flex-row  overflow-x-hidden  ">
       <div>
         <SideBar sideMenu={isMenuOpen} closeSideBar={setSideMenu} />
       </div>

@@ -50,12 +50,15 @@ function SideBar({ sideMenu, closeSideBar }) {
           icon={<LuLayoutDashboard size={22} />}
           text={<span>Dashboard</span>}
           path={"/profile"}
+          onClick={() => {
+            dispatch(decrement());
+          }}
         ></SideIcons>
         <Link
           to="/profile/products"
           className=" text-blue-500 flex flex-row justify-start pl-4 mb-2 gap-2"
           onClick={() => {
-            console.log(true);
+            dispatch(decrement());
           }}
         >
           <TiDropbox />
@@ -97,7 +100,7 @@ function SideBar({ sideMenu, closeSideBar }) {
             console.log(authRdx);
             console.log("works");
           }}
-          className=" text-blue-500 flex flex-row justify-start pl-4 mb-2  gap-2"
+          className=" text-blue-500 flex flex-row justify-start pl-4 mb-2  gap-2 cursor-pointer"
         >
           <CiLogout />
           <span>LogOut</span>
