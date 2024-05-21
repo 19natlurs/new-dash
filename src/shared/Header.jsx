@@ -9,6 +9,7 @@ import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { increment } from "../redux/menuSlider";
+import { logout } from "../redux/authRedux";
 
 function Header({ setSideMenu }) {
   const [isMenuOpen, setSideMenuOpen] = useState(false);
@@ -171,6 +172,14 @@ function Header({ setSideMenu }) {
                       className={`${
                         active ? "bg-violet-500 text-white" : "text-gray-900"
                       } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                      onClick={() => {
+                        dispatch(logout());
+                        // localStorage.removeItem("token");
+
+                        // navigate("/");
+                        // console.log(authRdx);
+                        console.log("works");
+                      }}
                     >
                       Logout
                     </button>
