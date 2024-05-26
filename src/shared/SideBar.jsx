@@ -41,27 +41,34 @@ function SideBar({ sideMenu, closeSideBar }) {
           }}
         />
       </div>
-      <div className=" text-blue-500 flex flex-row items-center px-3 justify-start gap-1 pt-3 pb-2">
+      <div
+        className=" text-blue-500 flex flex-row items-center px-3 justify-start gap-1 pt-3 pb-2 cursor-pointer"
+        onClick={() => {
+          dispatch(decrement());
+        }}
+      >
         <FcBullish size={24} /> <span>OpenShop</span>
       </div>
 
       <div className="  flex flex-col text-white  pt-5">
-        <SideIcons
-          icon={<LuLayoutDashboard size={22} />}
-          text={<span>Dashboard</span>}
-          path={"/profile"}
-          onClick={() => {
-            dispatch(decrement());
-          }}
-        ></SideIcons>
         <Link
-          to="/profile/products"
-          className=" text-blue-500 flex flex-row justify-start pl-4 mb-2 gap-2"
+          className=" text-blue-500 flex flex-row justify-start pl-4 mb-4 gap-2"
+          to={"/profile"}
           onClick={() => {
             dispatch(decrement());
           }}
         >
-          <TiDropbox />
+          <LuLayoutDashboard size={22} />
+          <span>Dashboard</span>
+        </Link>
+        <Link
+          to="/profile/products"
+          className=" text-blue-500 flex flex-row justify-start pl-4 mb-4 gap-2"
+          onClick={() => {
+            dispatch(decrement());
+          }}
+        >
+          <TiDropbox size={22} />
           <span>Products</span>
         </Link>
         <SideIcons
